@@ -22,4 +22,4 @@ dist
 *.sln
 *.sw?
 
-# public/CNAME
+docs/CNAME
