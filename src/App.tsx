@@ -7,6 +7,7 @@ import Commands from './components/Commands';
 import Support from './components/Support';
 import Terms from './components/Terms';
 import Privacy from './components/Privacy';
+import About from './components/About';
 
 const NavigationWithRouter = () => {
   const location = useLocation();
@@ -132,6 +133,8 @@ const App: React.FC = () => {
           <Route path="/home" element={<Home />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/about" element={<About />} />
+          
         </Routes>
       </div>
     </Router>
