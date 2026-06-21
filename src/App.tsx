@@ -8,6 +8,7 @@ import Support from './components/Support';
 import Terms from './components/Terms';
 import Privacy from './components/Privacy';
 import About from './components/About';
+import { useEffect } from 'react';
 
 const NavigationWithRouter = () => {
   const location = useLocation();
@@ -17,6 +18,10 @@ const NavigationWithRouter = () => {
 };
 
 const Home: React.FC = () => {
+  useEffect(() => {
+    document.title = "Pixtoka | The Discord Bot";
+  }, []);
+
   return (
     <div className="min-h-screen selection:bg-blue-500/30">
     <main>
@@ -131,7 +136,6 @@ const App: React.FC = () => {
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/about" element={<About />} />
-          
         </Routes>
       </div>
     </Router>
