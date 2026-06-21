@@ -9,11 +9,11 @@ const Hero: React.FC = () => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => setIsVisible(entry.isIntersecting));
     }, { threshold: 0.1 });
-    
+
     if (domRef.current) {
       observer.observe(domRef.current);
     }
-    
+
     return () => {
       if (domRef.current) observer.unobserve(domRef.current);
     };
@@ -48,12 +48,20 @@ const Hero: React.FC = () => {
           Next-generation moderation made simple. Fast, reliable, and built to handle the essentials your Discord community needs.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20">
-          <button className="w-full sm:w-auto px-10 py-5 bg-blue-600 hover:bg-blue-500 text-white rounded-2xl font-black text-lg transition-all transform hover:scale-105 shadow-2xl shadow-blue-600/30">
+          <a className="w-full sm:w-auto px-10 py-5 bg-blue-600 hover:bg-blue-500 text-white rounded-2xl font-black text-lg transition-all transform hover:scale-105 shadow-2xl shadow-blue-600/30"
+            href="https://pixtoka.com/invite"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Add to Discord
-          </button>
-          <button className="w-full sm:w-auto px-10 py-5 bg-slate-900/50 backdrop-blur border border-slate-800 hover:bg-slate-800 text-white rounded-2xl font-black text-lg transition-all border-slate-700">
+          </a>
+          <a className="w-full sm:w-auto px-10 py-5 bg-slate-900/50 backdrop-blur border border-slate-800 hover:bg-slate-800 text-white rounded-2xl font-black text-lg transition-all border-slate-700"
+            href="https://docs.pixtoka.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Read the Documentation
-          </button>
+          </a>
         </div>
       </div>
     </div>
