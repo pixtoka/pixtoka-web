@@ -1,19 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-interface PrivacyProps {
-  onNavigate: (page: string) => void;
-}
-
-const Privacy: React.FC<PrivacyProps> = ({ onNavigate }) => {
+const Privacy: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-950 text-white pt-24 pb-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <button
-          onClick={() => onNavigate('home')}
-          className="text-blue-400 hover:text-blue-300 font-medium mb-8 inline-flex items-center gap-2 transition-colors"
-        >
+        <Link to="/" className="text-blue-400 hover:text-blue-300 font-medium mb-8 inline-flex items-center gap-2 transition-colors">
           ← Back to Home
-        </button>
+        </Link>
 
         <h1 className="text-4xl font-black mb-6 bg-gradient-to-r from-white via-slate-200 to-blue-500 bg-clip-text text-transparent">
           Privacy Policy
