@@ -39,19 +39,16 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage }) => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          
-          {/* Logo - Retour à l'accueil */}
           <Link to="/" className="flex items-center gap-3 group cursor-pointer">
             <div className="relative w-10 h-10 bg-[#1a1a1a] rounded-xl flex items-center justify-center overflow-hidden border border-white/5 shadow-lg group-hover:scale-110 transition-transform">
-              <img src="/Pixtoka_Logo_Cropped_SkyBlue.svg" alt="Logo" className="w-5 h-5" />
+              <img src="/Pixtoka_Logo_Cropped_SkyBlue.svg" alt="Logo" className="w-7 h-7" />
             </div>
             <span className="text-xl font-black tracking-tight text-white">Pixtoka</span>
           </Link>
 
-          {/* Liens du centre */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-6">
-              <Link 
+              <Link
                 to="/"
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   currentPage === 'home' || currentPage === '' ? 'text-blue-400' : 'text-slate-300 hover:text-white'
@@ -60,42 +57,24 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage }) => {
                 Home
               </Link>
 
-              <button 
+              <button
                 onClick={() => handleSectionScroll('commands')}
                 className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Commands
               </button>
 
-              <button 
+              <button
                 onClick={() => handleSectionScroll('support')}
                 className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 FAQ
               </button>
 
-              <Link 
-                to="/privacy"
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  currentPage === 'privacy' ? 'text-blue-400' : 'text-slate-300 hover:text-white'
-                }`}
-              >
-                Privacy
-              </Link>
-
-              <Link 
-                to="/terms"
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  currentPage === 'terms' ? 'text-blue-400' : 'text-slate-300 hover:text-white'
-                }`}
-              >
-                Terms
-              </Link>
-
-              <a 
-                href="https://docs.pixtoka.xyz" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://docs.pixtoka.xyz"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Documentation
