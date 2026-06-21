@@ -84,7 +84,7 @@ const Home: React.FC = () => {
         <span className="font-black text-2xl text-white tracking-tight">Pixtoka</span>
         </div>
         <p className="text-slate-500 text-base leading-relaxed">
-        Empowering community builders with the world's most versatile Discord orchestration platform.
+        Next-generation moderation made simple. Fast, reliable, and built to handle the essentials your Discord community needs.
         </p>
         </div>
 
@@ -103,9 +103,9 @@ const Home: React.FC = () => {
         </div>
         <div className="flex flex-col gap-5">
         <h5 className="text-white font-bold uppercase tracking-widest text-[11px]">Company</h5>
-        <a href="https://pixtoka.xyz/about" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-400 transition-colors">About Us</a>
-        <a href="https://pixtoka.xyz/privacy" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-400 transition-colors">Privacy</a>
-        <a href="https://pixtoka.xyz/terms" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-400 transition-colors">Terms</a>
+        <a href="https://pixtoka.xyz/about" className="text-slate-500 hover:text-blue-400 transition-colors">About Us</a>
+        <a href="https://pixtoka.xyz/privacy" className="text-slate-500 hover:text-blue-400 transition-colors">Privacy</a>
+        <a href="https://pixtoka.xyz/terms" className="text-slate-500 hover:text-blue-400 transition-colors">Terms</a>
         </div>
         </div>
         </div>
