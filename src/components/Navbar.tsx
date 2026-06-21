@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'; // FIX: Ajout de useState et useEffect
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 interface NavbarProps {
@@ -21,7 +21,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage }) => {
   const handleSectionScroll = (sectionId: string) => {
     // Redirige vers la racine du HashRouter ('/')
     navigate('/');
-    
+
     // Un petit délai laisse le temps au DOM de recharger l'accueil si on arrivait d'une autre page
     setTimeout(() => {
       const element = document.getElementById(sectionId);
