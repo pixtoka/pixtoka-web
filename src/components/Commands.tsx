@@ -5,23 +5,17 @@ const Commands: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('All');
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
-  
-  const categories = ['All', 'General', 'Moderation', 'Fun', 'Utility', 'Economy'];
-  
+
+  const categories = ['All', 'General', 'Moderation', 'Utility'];
+
   const commands = [
     { name: 'help', desc: 'Display all available commands and bot information.', cat: 'General' },
-    { name: 'ping', desc: 'Check connection latency and server status.', cat: 'Utility' },
-    { name: 'rank', desc: 'Check your current level and experience progress.', cat: 'General' },
     { name: 'ban', desc: 'Permanently remove a user from the server.', cat: 'Moderation' },
     { name: 'timeout', desc: 'Mute a user for a specified duration.', cat: 'Moderation' },
     { name: 'clear', desc: 'Bulk delete messages from the current channel.', cat: 'Moderation' },
-    { name: 'imagine', desc: 'Generate high-quality AI images using Gemini.', cat: 'Fun' },
-    { name: 'poll', desc: 'Create interactive reaction-based polls.', cat: 'Utility' },
-    { name: 'work', desc: 'Perform a daily job to earn server currency.', cat: 'Economy' },
-    { name: 'shop', desc: 'Browse and purchase items from the server store.', cat: 'Economy' },
-    { name: 'avatar', desc: 'View the profile picture of yourself or another member.', cat: 'Fun' },
+    { name: 'ping', desc: 'Check connection latency and server status.', cat: 'Utility' },
     { name: 'stats', desc: 'Get detailed statistics about the server.', cat: 'Utility' },
-    { name: 'giveaway', desc: 'Start a timed giveaway with custom requirements.', cat: 'Utility' },
+
   ];
 
   useEffect(() => {
@@ -35,13 +29,13 @@ const Commands: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
-  const filteredCommands = activeCategory === 'All' 
-    ? commands 
+  const filteredCommands = activeCategory === 'All'
+    ? commands
     : commands.filter(c => c.cat === activeCategory);
 
   return (
-    <section 
-      id="commands" 
+    <section
+      id="commands"
       ref={sectionRef}
       className="py-32 bg-slate-950/50 relative overflow-hidden"
     >
@@ -54,7 +48,7 @@ const Commands: React.FC = () => {
       <div className={`max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight">Powerful Slash Commands</h2>
-          <p className="text-slate-400 text-lg">Everything at your fingertips. Click any command to view documentation.</p>
+          <p className="text-slate-400 text-lg">A sneak peek of our most popular commands. Filter by category to explore.</p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-3 mb-12">
@@ -63,8 +57,8 @@ const Commands: React.FC = () => {
               key={cat}
               onClick={() => setActiveCategory(cat)}
               className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 border relative overflow-hidden group/btn ${
-                activeCategory === cat 
-                  ? 'bg-blue-600 border-blue-500 text-white shadow-[0_0_20px_rgba(37,99,235,0.4)] scale-105' 
+                activeCategory === cat
+                  ? 'bg-blue-600 border-blue-500 text-white shadow-[0_0_20px_rgba(37,99,235,0.4)] scale-105'
                   : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white hover:border-slate-600'
               }`}
               style={{ transitionDelay: `${idx * 50}ms` }}
@@ -78,15 +72,15 @@ const Commands: React.FC = () => {
         </div>
 
         {/* Grid with consistent height and fixed min-height to prevent layout jump */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 min-h-[500px] content-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 min-h-[300px] content-start">
           {filteredCommands.map((cmd, idx) => (
-            <a 
-              key={`${activeCategory}-${cmd.name}`} 
-              href={`https://docs.pixtoka.com/commands/${cmd.name}/`}
+            <a
+              key={`${activeCategory}-${cmd.name}`}
+              href={`https://docs.pixtoka.xyz/commands/${cmd.cat}/${cmd.name}/`}
               target="_blank"
               rel="noopener noreferrer"
               className={`flex flex-col p-8 rounded-3xl bg-slate-900/40 backdrop-blur-sm border border-slate-800 hover:border-blue-500/50 transition-all duration-500 group animate-in fade-in slide-in-from-bottom-4 relative h-full`}
-              style={{ 
+              style={{
                 animationDelay: `${idx * 60}ms`,
                 animationFillMode: 'both'
               }}
@@ -99,7 +93,7 @@ const Commands: React.FC = () => {
                   {cmd.cat}
                 </span>
               </div>
-              
+
               <div className="flex-1">
                 <h5 className="text-white font-bold text-xl mb-3 group-hover:text-blue-400 transition-colors duration-300 flex items-center gap-2">
                   {cmd.name}
@@ -116,11 +110,31 @@ const Commands: React.FC = () => {
               <div className="mt-6 flex items-center text-blue-500/60 font-bold text-[10px] uppercase tracking-tighter group-hover:text-blue-400">
                 View Documentation <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
               </div>
-              
+
               {/* Hover Glow Effect */}
               <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[1.8rem] pointer-events-none"></div>
             </a>
           ))}
+        </div>
+        <div className="mt-16 text-center flex flex-col items-center justify-center">
+          <p className="text-slate-500 text-md font-semibold mb-4 max-w-md py-2">
+            Looking for something specific? We have dozens of other commands ready to help you manage your server.
+          </p>
+          <a
+            href="https://docs.pixtoka.xyz/commands/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-full transition-all duration-300 shadow-[0_0_25px_rgba(37,99,235,0.3)] hover:shadow-[0_0_35px_rgba(37,99,235,0.5)] hover:scale-105 group shimmer-btn shimmer-btn-hover"
+          >
+            Explore All Commands
+            <svg xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 transform group-hover:translate-x-1 transition-transform duration-300"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
         </div>
       </div>
 

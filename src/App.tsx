@@ -14,7 +14,8 @@ function App() {
         <Hero />
 
         {/* Stats Section */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 mb-32 relative z-10">
+        {/* This section is currently hidden. Reserved for future use. */}
+        {/* <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 mb-32 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-10 bg-slate-900/80 backdrop-blur-2xl border border-slate-800 rounded-[2rem] shadow-2xl">
             <div className="text-center p-4 border-r border-slate-800 last:border-0">
               <div className="text-4xl font-black text-white">50K+</div>
@@ -33,7 +34,7 @@ function App() {
               <div className="text-[10px] text-slate-500 uppercase tracking-[0.2em] font-bold mt-2">Commands</div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <Features />
 
@@ -42,7 +43,8 @@ function App() {
         <Support />
 
         {/* CTA Bottom Section */}
-        <section className="py-40 border-t border-slate-900 bg-gradient-to-b from-transparent to-blue-950/20">
+        {/* This section is currently hidden. Reserved for future use. */}
+        {/* <section className="py-40 border-t border-slate-900 bg-gradient-to-b from-transparent to-blue-950/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-5xl font-black text-white mb-8">Ready to transform your server?</h2>
             <p className="text-slate-400 text-xl mb-12 leading-relaxed max-w-2xl mx-auto">
@@ -54,7 +56,7 @@ function App() {
               </button>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
 
       <footer className="bg-slate-950 border-t border-slate-900 py-20">
@@ -83,24 +85,24 @@ function App() {
                 <h5 className="text-white font-bold uppercase tracking-widest text-[11px]">Product</h5>
                 <a href="#features" className="text-slate-500 hover:text-blue-400 transition-colors">Features</a>
                 <a href="#commands" className="text-slate-500 hover:text-blue-400 transition-colors">Commands</a>
-                <a href="#" className="text-slate-500 hover:text-blue-400 transition-colors">Dashboard</a>
+                <a href="https://dashboard.pixtoka.xyz" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-400 transition-colors">Dashboard</a>
               </div>
               <div className="flex flex-col gap-5">
                 <h5 className="text-white font-bold uppercase tracking-widest text-[11px]">Resources</h5>
-                <a href="#" className="text-slate-500 hover:text-blue-400 transition-colors">Documentation</a>
-                <a href="#" className="text-slate-500 hover:text-blue-400 transition-colors">API Reference</a>
-                <a href="#" className="text-slate-500 hover:text-blue-400 transition-colors">Status</a>
+                <a href="https://docs.pixtoka.xyz" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-400 transition-colors">Documentation</a>
+                <a href="https://api.pixtoka.xyz" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-400 transition-colors">API Reference</a>
+                <a href="https://status.pixtoka.xyz" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-400 transition-colors">Status</a>
               </div>
               <div className="flex flex-col gap-5">
                 <h5 className="text-white font-bold uppercase tracking-widest text-[11px]">Company</h5>
-                <a href="#" className="text-slate-500 hover:text-blue-400 transition-colors">About Us</a>
-                <a href="#" className="text-slate-500 hover:text-blue-400 transition-colors">Privacy</a>
-                <a href="#" className="text-slate-500 hover:text-blue-400 transition-colors">Terms</a>
+                <a href="https://pixtoka.xyz/about" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-400 transition-colors">About Us</a>
+                <a href="https://pixtoka.xyz/privacy" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-400 transition-colors">Privacy</a>
+                <a href="https://pixtoka.xyz/terms" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-400 transition-colors">Terms</a>
               </div>
             </div>
           </div>
           <div className="mt-20 pt-10 border-t border-slate-900/50 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-600">
-            <p>© 2026 Pixtoka by <a href="https://hexoraw.com">Hexoraw</a>. All rights reserved.</p>
+            <p>© 2026 Pixtoka by <a href="https://hexoraw.com" target="_blank" rel="noopener noreferrer">Hexoraw</a>. All rights reserved.</p>
             <div className="flex gap-8">
               <p>Built with ❤️ for Discord communities</p>
             </div>

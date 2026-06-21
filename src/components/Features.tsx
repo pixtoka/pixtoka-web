@@ -3,55 +3,56 @@ import React from 'react';
 
 const Features: React.FC = () => {
   const detailedFeatures = [
-    {
-      title: "Smart Auto-Mod",
-      description: "AI-powered detection for spam, raids, and toxic behavior. Customizable filters that learn from your community.",
+{
+      title: "Core Auto-Mod",
+      description: "Keep your server safe round-the-clock. Powerful, high-performance filters to prevent spam, bulk-deletes, and unwanted behavior instantly.",
       icon: "🛡️",
       accent: "from-blue-500 to-indigo-600"
     },
     {
-      title: "Visual XP Cards",
-      description: "Beautifully rendered rank cards that users can customize. Automatic role rewards based on activity.",
-      icon: "🏆",
-      accent: "from-blue-400 to-cyan-500"
-    },
-    {
-      title: "Real-time Metrics",
-      description: "Deep insights into server growth, message density, and member retention via the web dashboard.",
+      title: "Interactive Polls",
+      description: "Engage your community right away with easy-to-use, reaction-based interactive polls designed for instant feedback.",
       icon: "📊",
       accent: "from-indigo-500 to-purple-600"
     },
     {
-      title: "Custom AI Personas",
-      description: "Create AI bots with specific personalities using our Gemini-powered engine to entertain your users.",
-      icon: "🧠",
-      accent: "from-blue-600 to-blue-400"
+      title: "Server Utilities",
+      description: "Essential commands at your disposal. Check connection latency, view server status, and monitor runtime metrics instantly.",
+      icon: "⚙️",
+      accent: "from-blue-500 to-indigo-400"
     },
     {
-      title: "Global Economy",
-      description: "A cross-server marketplace where users can trade, gamble, and collect rare digital items.",
+      title: "Leveling & Activity",
+      description: "Track member progress dynamically. Check current experience levels and ranking progress as users interact in your channels.",
+      icon: "🏆",
+      accent: "from-blue-400 to-cyan-500"
+    },
+    {
+      title: "Server Economy",
+      description: "Bring life to your chat with a fully functioning currency system. Let users work, save up, and browse the local server shop.",
       icon: "💎",
       accent: "from-cyan-600 to-blue-500"
     },
     {
-      title: "Streamer Alerts",
-      description: "Seamlessly integrate Twitch, YouTube, and Kick notifications directly into your server channels.",
-      icon: "🎥",
-      accent: "from-blue-500 to-indigo-400"
+      title: "Community Fun",
+      description: "Lighthearted tools like quick profile avatar lookups and engaging commands to keep your text channels active and entertaining.",
+      icon: "🎮",
+      accent: "from-blue-600 to-blue-400"
     }
   ];
 
   return (
-    <section id="features" className="py-32 relative overflow-hidden">
+    <section id="features" className=" relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="text-sm font-bold tracking-[0.4em] text-blue-500 uppercase mb-4">Core Capabilities</h2>
-          <h3 className="text-4xl md:text-5xl font-black text-white mb-6">Built for the next generation of communities.</h3>
+          <h3 className="text-4xl md:text-5xl font-black text-white mb-6">
+            Everything you need to run your server.
+          </h3>
           <p className="max-w-2xl mx-auto text-slate-400 text-lg">
-            Pixtoka isn't just another bot. It's a comprehensive infrastructure for your digital home.
+            Pixtoka delivers rock-solid moderation and essential community tools, built on high-performance architecture for your digital home.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {detailedFeatures.map((feature, idx) => (
             <div key={idx} className="relative group p-8 rounded-3xl bg-slate-900/40 border border-slate-800 hover:border-blue-500/50 transition-all duration-500 hover:-translate-y-2">

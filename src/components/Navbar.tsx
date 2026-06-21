@@ -34,10 +34,10 @@ const Navbar: React.FC = () => {
 
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a href="#" className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
-              <a href="#features" className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Features</a>
+              <a href="https://pixtoka.xyz" className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+              <a href="https://docs.pixtoka.xyz" target="_blank"  rel="noopener noreferrer" className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Documentation</a>
               <a href="#commands" className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Commands</a>
-              <a href="#support" className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Support</a>
+              <a href="#support" className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">FAQ</a>
             </div>
           </div>
 
