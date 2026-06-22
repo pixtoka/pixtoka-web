@@ -58,6 +58,13 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage }) => {
               </Link>
 
               <button
+                onClick={() => handleSectionScroll('features')}
+                className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Features
+              </button>
+
+              <button
                 onClick={() => handleSectionScroll('commands')}
                 className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
