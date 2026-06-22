@@ -83,9 +83,14 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage }) => {
           </div>
 
           <div className="flex items-center gap-4">
-            <button className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2.5 rounded-xl text-sm font-semibold transition-all shadow-lg shadow-blue-600/20 hover:shadow-blue-600/40">
+            <a
+              href="https://pixtoka.xyz/invite"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2.5 rounded-xl text-sm font-semibold transition-all shadow-lg shadow-blue-600/20 hover:shadow-blue-600/40"
+            >
               Add to Discord
-            </button>
+            </a>
           </div>
 
         </div>
