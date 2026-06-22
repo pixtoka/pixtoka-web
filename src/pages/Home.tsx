@@ -142,14 +142,14 @@ const Home: React.FC = () => {
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20">
                                 <a className="w-full sm:w-auto px-10 py-5 bg-blue-600 hover:bg-blue-500 text-white rounded-2xl font-black text-lg transition-all transform hover:scale-105 shadow-2xl shadow-blue-600/30"
-                                    href="https://pixtoka.com/invite"
+                                    href="https://pixtoka.xyz/invite"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     Add to Discord
                                 </a>
                                 <a className="w-full sm:w-auto px-10 py-5 bg-slate-900/50 backdrop-blur border border-slate-800 hover:bg-slate-800 text-white rounded-2xl font-black text-lg transition-all border-slate-700"
-                                    href="https://docs.pixtoka.com"
+                                    href="https://docs.pixtoka.xyz"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
