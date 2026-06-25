@@ -17,12 +17,9 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Gère le scroll vers une section spécifique de l'accueil
   const handleSectionScroll = (sectionId: string) => {
-    // Redirige vers la racine du HashRouter ('/')
     navigate('/');
 
-    // Un petit délai laisse le temps au DOM de recharger l'accueil si on arrivait d'une autre page
     setTimeout(() => {
       const element = document.getElementById(sectionId);
       if (element) {
@@ -48,58 +45,40 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage }) => {
 
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-6">
-              <Link
-                to="/"
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  currentPage === 'home' || currentPage === '' ? 'text-blue-400' : 'text-slate-300 hover:text-white'
-                }`}
-              >
+              <Link to="/" className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                currentPage === 'home' || currentPage === '' ? 'text-blue-400' : 'text-slate-300 hover:text-white'
+                }`}>
                 Home
               </Link>
 
-              <button
-                onClick={() => handleSectionScroll('features')}
-                className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
+              <button onClick={() => handleSectionScroll('features')}
+                className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Features
               </button>
 
-              <button
-                onClick={() => handleSectionScroll('commands')}
-                className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
+              <button onClick={() => handleSectionScroll('commands')}
+                className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Commands
               </button>
 
-              <button
-                onClick={() => handleSectionScroll('support')}
-                className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
+              <button onClick={() => handleSectionScroll('support')}
+                className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 FAQ
               </button>
 
-              <a
-                href="https://docs.pixtoka.xyz"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
+              <a href="https://docs.pixtoka.xyz" target="_blank" rel="noopener noreferrer"
+                className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Documentation
               </a>
             </div>
           </div>
 
           <div className="flex items-center gap-4">
-            <a
-              href="https://pixtoka.xyz/invite"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2.5 rounded-xl text-sm font-semibold transition-all shadow-lg shadow-blue-600/20 hover:shadow-blue-600/40"
-            >
+            <a href="https://pixtoka.xyz/invite" target="_blank" rel="noopener noreferrer"
+              className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2.5 rounded-xl text-sm font-semibold transition-all shadow-lg shadow-blue-600/20 hover:shadow-blue-600/40">
               Add to Discord
             </a>
           </div>
-
         </div>
       </div>
     </nav>

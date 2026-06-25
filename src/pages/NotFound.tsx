@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NotFound: React.FC = () => {
     useEffect(() => {
-        document.title = "404 | Pixtoka";
+        document.title = "Not Found | Pixtoka";
     }, []);
 
     return (
